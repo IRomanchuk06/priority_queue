@@ -143,9 +143,103 @@ bool priorityQueue::isEmpty() const {
        - Проверка, пуста ли куча, основываясь на пустоте вектора `a`.
 
 ## <p align="center">Результаты тестирования:</p>
-Тестирование проводилось с помощью фреймворка Google test. Система тестов состоит из 5 тестов: 2 базовых теста на вставку и извлечение, тест на вставку и извлечение с одинаковыми элементами, тест на вставку и извлечение с отрицательными элементами, тест на извлечение из пустой очереди.
+Тестирование проводилось с помощью фреймворка Google test. Система тестов состоит из 5 тестов: 2 базовых теста на вставку и извлечение, тест на вставку и извлечение с одинаковыми элементами, тест на вставку и извлечение с отрицательными элементами, тест на извлечение из пустой очереди. Все тесты прошли успешно.
 
+<p align="center">
+  <img src="https://github.com/IRomanchuk06/PriorityQueue/blob/main/TestPriorityQueue.png?raw=true" alt="Тесты библиотеки">
+</p>
 
+**Система тестов:**
+
+```cpp
+#include "pch.h"
+#include <gtest/gtest.h>
+#include "../priorituQueue/priorityQueue.h"
+using namespace std;
+
+//базовый тест на вставку и извлечение
+TEST(PriorityQueueTest, InsertAndExtract1) {
+    priorityQueue pq;
+
+    EXPECT_TRUE(pq.isEmpty());
+
+    pq.insert(10);
+    pq.insert(5);
+    pq.insert(20);
+
+    EXPECT_FALSE(pq.isEmpty());
+
+    EXPECT_EQ(pq.extract(), 20);
+    EXPECT_EQ(pq.extract(), 10);
+    EXPECT_EQ(pq.extract(), 5);
+
+    EXPECT_TRUE(pq.isEmpty());
+}
+
+//базовый тест на вставку и извлечение
+TEST(PriorityQueueTest, InsertAndExtract2) {
+    priorityQueue pq;
+
+    pq.insert(10);
+    pq.insert(5);
+    pq.insert(20);
+    pq.insert(15);
+    pq.insert(25);
+
+    EXPECT_EQ(pq.extract(), 25);
+    EXPECT_EQ(pq.extract(), 20);
+    EXPECT_EQ(pq.extract(), 15);
+    EXPECT_EQ(pq.extract(), 10);
+    EXPECT_EQ(pq.extract(), 5);
+
+    EXPECT_TRUE(pq.isEmpty());
+}
+
+//тест на вставку и извлечение с одинаковыми элементами
+TEST(PriorityQueueTest, InsertAndExtractWithDuplicates) {
+    priorityQueue pq;
+    pq.insert(10);
+    pq.insert(5);
+    pq.insert(10);
+    pq.insert(8);
+
+    EXPECT_EQ(pq.extract(), 10);
+    EXPECT_EQ(pq.extract(), 10);
+    EXPECT_EQ(pq.extract(), 8);
+    EXPECT_EQ(pq.extract(), 5);
+    EXPECT_TRUE(pq.isEmpty());
+}
+
+//тест на извлечение из пустой очереди
+TEST(PriorityQueueTest, ExtractFromEmptyQueue) {
+    priorityQueue pq;
+
+    EXPECT_THROW(pq.extract(), std::out_of_range);
+}
+
+//тест на вставку и извлечение с отрицательными элементами
+TEST(PriorityQueueTest, InsertWithNegativeNumbers) {
+    priorityQueue pq;
+    
+    pq.insert(10);
+    pq.insert(-5);
+    pq.insert(25);
+    pq.insert(-10);
+    pq.insert(-2);
+
+    EXPECT_EQ(pq.extract(), 25);
+    EXPECT_EQ(pq.extract(), 10);
+    EXPECT_EQ(pq.extract(), -2);
+    EXPECT_EQ(pq.extract(), -5);
+    EXPECT_EQ(pq.extract(), -10);
+    EXPECT_TRUE(pq.isEmpty());
+}
+
+int main(int argc, char** argv) {
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+}
+```
 
 ## <p align="center">Используемые источники:</p>
 1. https://neerc.ifmo.ru/wiki/index.php?title=Приоритетные_очереди#.D0.A0.D0.B5.D0.B0.D0.BB.D0.B8.D0.B7.D0.B0.D1.86.D0.B8.D0.B8 (определения понятий).
