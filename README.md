@@ -58,7 +58,7 @@ Responsible for inserting a new element into the priority queue. This method add
     - **Auxiliary up method:**
     Responsible for lifting the element up the tree to restore the binary heap conditions after insertion. This method executes a loop, comparing the value of the current element with its parent and swapping them as necessary until the element reaches the correct position.
 
-``cpp.
+```cpp.
 void priorityQueue::insert(int value) {
 	a.push_back(value);
 	up(a.size() - 1);
@@ -77,7 +77,7 @@ Responsible for extracting the highest priority element from the priority queue.
     - **Auxiliary method down:**
     Responsible for dropping an element down the tree to restore the binary heap conditions after an extraction. This method executes a loop, comparing the value of the current element with its descendants and swapping its position with the largest of the descendants, if necessary, until the element reaches the correct position.
 
-``cpp.
+```cpp.
 int priorityQueue::extract() {
 	if (isEmpty()) {
 		throw out_of_range(‘Priority queue is empty’);
@@ -106,7 +106,7 @@ void priorityQueue::down(int i) {
 4. **Method for checking if the queue is empty (isEmpty):**
 Checks if the priority queue is empty. Returns true if vector a is empty and false otherwise.
 
-``cpp
+```cpp
 bool priorityQueue::isEmpty() const {
 	return a.empty();
 }
@@ -146,7 +146,7 @@ bool priorityQueue::isEmpty() const {
 The testing was done using the Google test framework. The test system consists of 5 tests: 2 basic tests for insertion and extraction, test for insertion and extraction with identical elements, test for insertion and extraction with negative elements, test for extraction from an empty queue. All tests passed successfully.
 
 <p align=‘centre’>
-  <img src=‘https://github.com/IRomanchuk06/PriorityQueue/blob/main/TestPriorityQueue.png?raw=true’ alt=‘Library tests’>
+  <img src='TestPriorityQueue.png' alt=‘Library tests’>
 </p>
 
 **Test System:**
