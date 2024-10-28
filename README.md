@@ -1,64 +1,64 @@
-# <p align="center">Лабораторная работа №1</p>
+# <p align=‘centre’>Lab 1</p>
 
-Вариант 25. Очередь с приоритетом. Вставка элемента в очередь. Взятие элемента из очереди.
+Variant 25: Queue with priority. Inserting an item into the queue. Taking an item from the queue.
 
-## <p align="center">Цели лабораторной работы:</p>
-1. Разработать библиотеку для работы с очередью с приоритетом на выбранном императивном языке программирования (например, C++, Java, Python).
-2. Создать тестовую программу для демонстрации функциональности разработанной библиотеки.
-3. Разработать систему тестов для проверки работоспособности и корректности библиотеки, учитывая требования полноты, адекватности и непротиворечивости.
-4. Обеспечить обработку некорректных данных, предусмотрев корректное завершение программы при возникновении ошибок.
-5. Составить отчет по выполнению лабораторной работы.
+## <p align=‘centre’>Purposes of the lab work:</p>
+1. Develop a library for working with a queue with priority in the chosen imperative programming language (e.g. C++, Java, Python).
+2. Create a test programme to demonstrate the functionality of the developed library.
+3. Develop a system of tests to verify the performance and correctness of the library, taking into account the requirements of completeness, adequacy and consistency.
+4. To provide processing of incorrect data, providing for correct termination of the programme in case of errors.
+5. Write a report on the laboratory work.
    
-## <p align="center">Задачи лабораторной работы:</p>
-1. Изучить спецификацию задачи по работе с очередью с приоритетом.
-2. Выбрать язык программирования для реализации библиотеки (например, C++, Java, Python) в соответствии с индивидуальным заданием.
-3. Разработать и реализовать библиотеку для работы с очередью с приоритетом, включая операции вставки и извлечения элементов.
-4. Написать тестовую программу, которая демонстрирует основные сценарии использования библиотеки.
-5. Разработать систему тестов, включающую тест-кейсы для проверки различных аспектов работы библиотеки, включая корректность, производительность и обработку ошибок.
-6. Провести тестирование разработанной библиотеки, убедившись в ее правильной работе на различных входных данных.
-7. Составить подробный отчет, включая описание решения задачи, архитектуры библиотеки, результаты тестирования и выводы.
+## <p align=‘centre’>Tasks of the laboratory work:</p>
+1. Study the specification of the task of working with the queue with priority.
+2. Choose a programming language to implement the library (e.g. C++, Java, Python) according to the individual task.
+3. Design and implement a library for working with a queue with priority, including operations of insertion and extraction of elements.
+4. Write a test programme that demonstrates the basic scenarios of using the library.
+5. Develop a test system including test cases to test various aspects of the library including correctness, performance and error handling.
+6. Conduct testing of the developed library, ensuring that it works correctly on various inputs.
+7. Write a detailed report, including a description of the problem solution, library architecture, testing results and conclusions.
 
-## <p align="center">Список используемых понятий и алгоритмов:</p>
-1. **Библиотека программного обеспечения (Библиотека кода):**
-В программировании библиотека представляет собой совокупность программного кода, предназначенного для решения определенных задач. Этот код может содержать функции, классы, процедуры или другие компоненты, которые разработчики могут повторно использовать в своих программных проектах. Библиотеки упрощают разработку, так как они предоставляют готовые решения для типовых задач.
+## <p align=‘centre’>List of concepts and algorithms used:</p>
+1. **Software Library (Code Library):**
+In programming, a library is a collection of programme code intended for solving certain tasks. This code may contain functions, classes, procedures, or other components that developers can reuse in their software projects. Libraries simplify development because they provide ready-made solutions to typical problems.
 
-2. **Приоритетная очередь:**
-   Приоритетная очередь (англ. priority queue) — это абстрактная структура данных наподобие стека или очереди, где у каждого элемента есть приоритет. Элемент с более высоким приоритетом находится перед элементом с более низким приоритетом.
+2. **Priority Queue:**
+   A priority queue is an abstract data structure like a stack or a queue, where each element has a priority. An element with a higher priority comes before an element with a lower priority.
 
-3. **Двоичная куча (Binary Heap):**
-   Двоичная куча представляет собой вид двоичного дерева, которое соответствует следующим трем условиям:
-   - **Сортировка значений:** Значение в каждой вершине не меньше, чем значения её потомков. В случае мин-кучи, значение в каждой вершине не больше значений её потомков, в макс-куче — не меньше.
-   - **Балансировка глубины:** Разница в глубине листьев (расстояние от корня до листа) не превышает 1 слой. Это обеспечивает сбалансированность дерева и эффективное использование памяти.
-   - **Заполнение слоев слева направо:** Последний слой дерева заполняется слева направо, без пропусков. Это обеспечивает эффективное хранение данных в виде массива.
+3. ** Binary Heap:** Binary Heap is an abstract data structure like a stack or a queue where each element has a priority before the element with a higher priority.
+   A binary heap is a type of binary tree that fulfils the following three conditions:
+   - **Sorting of values:** The value at each node is not less than the values of its descendants. In the case of a min-heap, the value at each vertex is not greater than the values of its descendants; in a max-heap, it is not less.
+   - **Depth balancing:** The difference in leaf depth (distance from root to leaf) does not exceed 1 layer. This ensures a balanced tree and efficient memory utilisation.
+   - **Filling layers from left to right:** The last layer of the tree is filled from left to right, without skips. This ensures efficient storage of data as an array.
 
-4. **Операции вставки и извлечения:**
-   - **Вставка (insert):** Операция добавления нового элемента в структуру данных. В контексте приоритетной очереди, элемент вставляется с учетом его приоритета.
-   - **Извлечение (extract):** Операция удаления и возврата элемента с наивысшим приоритетом из структуры данных.
+4. **Insertion and extraction operations:**
+   - **Insert (insert):** The operation of adding a new element to a data structure. In the context of a priority queue, an element is inserted based on its priority.
+   - **extract:** The operation of removing and returning the highest priority element from the data structure.
 
-5. **Методы поддержки структуры данных:**
-   - **Метод `up(i)`:** Поднимает элемент вверх по дереву, обеспечивая корректность структуры данных после вставки.
-   - **Метод `down(i)`:** Спускает элемент вниз по дереву, обеспечивая корректность структуры данных после извлечения.
+5. **Methods to maintain the data structure:**
+   - **Method `up(i)`:** Moves an element up the tree, ensuring that the data structure is correct after insertion.
+   - ** **Method `down(i)`:** Drops an element down the tree, ensuring that the data structure is correct after extraction.
 
-6. **Исключение `std::out_of_range`:**
-   Исключение, используемое в C++, чтобы сигнализировать о выходе индекса за пределы допустимого диапазона. В данном контексте, используется для обработки попыток извлечения из пустой приоритетной очереди.
+6. **Exception `std::out_of_range`:**
+   An exception used in C++ to signal when an index is out of range. In this context, used to handle retrieval attempts from an empty priority queue.
 
-7. **Тестирование с использованием Google Test:**
-   Google Test — это фреймворк для написания тестов в языке программирования C++. Тестирование с его использованием обеспечивает автоматизацию проверок и обеспечивает надежность кода.
+7. **Testing using Google Test:**
+   Google Test is a framework for writing tests in the C++ programming language. Testing using it provides test automation and ensures code reliability.
 
-## <p align="center">Описание используемых алгоритмов:</p>
-1. **Бинарная куча (Heap):**
-В своей библиотеке я реализовывал бинарную (двоичную) кучу через `std::vector`. Где n-ому элементу, соответствовали элементы 2n+1 и 2n+2.
+## <p align=‘centre’>Description of the algorithms used:</p>
+1. **Binary heap (Heap):**
+In my library I implemented a binary heap via `std::vector`. Where the n-th element corresponded to the elements 2n+1 and 2n+2.
 
-<p align="center">
-  <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/binaryheap.png" alt="Двоичная куча через вектор">
+<p align=‘centre’>
+  <img src=‘https://media.geeksforgeeks.org/wp-content/cdn-uploads/binaryheap.png’ alt=‘Binary heap via vector’>
 </p>
 
-2. **Метод вставки (insert):**
-Отвечает за вставку нового элемента в приоритетную очередь. Этот метод добавляет элемент в конец вектора и затем вызывает метод up, который поднимает элемент вверх по дереву для обеспечения соблюдения условий бинарной кучи.
-    - **Вспомогательный метод up:**
-    Отвечает за подъем элемента вверх по дереву для восстановления условий бинарной кучи после вставки. Этот метод выполняет цикл, сравнивая значение текущего элемента с его родителем и меняя их местами при необходимости до тех пор, пока элемент не достигнет правильной позиции.
+2. **Insert method (insert):**
+Responsible for inserting a new element into the priority queue. This method adds the element to the end of the vector and then calls the up method, which brings the element up the tree to enforce the binary heap conditions.
+    - **Auxiliary up method:**
+    Responsible for lifting the element up the tree to restore the binary heap conditions after insertion. This method executes a loop, comparing the value of the current element with its parent and swapping them as necessary until the element reaches the correct position.
 
-```cpp
+``cpp.
 void priorityQueue::insert(int value) {
 	a.push_back(value);
 	up(a.size() - 1);
@@ -72,15 +72,15 @@ void priorityQueue::up(int i) {
 }
 ```
 
-3. **Метод извлечения (extract):**
-Отвечает за извлечение элемента с наивысшим приоритетом из приоритетной очереди. Этот метод извлекает значение из корня, заменяет корень последним элементом вектора, а затем вызывает метод down, который опускает новый корень вниз по дереву для восстановления условий бинарной кучи. Также учитыется случай, когда происходит попытка извлечения из пустой очереди, для этого случая создано исключение `std::out_of_range` 
-    - **Вспомогательный метод down:**
-    Отвечает за опускание элемента вниз по дереву для восстановления условий бинарной кучи после извлечения. Этот метод выполняет цикл, сравнивая значение текущего элемента с его потомками и меняя его место с наибольшим из потомков, если это необходимо, до тех пор, пока элемент не достигнет правильной позиции.
+3. **Extract method:**
+Responsible for extracting the highest priority element from the priority queue. This method extracts the value from the root, replaces the root with the last element of the vector, and then calls the down method which drops the new root down the tree to restore the binary heap conditions. The case of attempting to retrieve from an empty queue is also taken into account, the `std::out_of_range` exception is created for this case 
+    - **Auxiliary method down:**
+    Responsible for dropping an element down the tree to restore the binary heap conditions after an extraction. This method executes a loop, comparing the value of the current element with its descendants and swapping its position with the largest of the descendants, if necessary, until the element reaches the correct position.
 
-```cpp
+``cpp.
 int priorityQueue::extract() {
 	if (isEmpty()) {
-		throw out_of_range("Priority queue is empty");
+		throw out_of_range(‘Priority queue is empty’);
 	}
 
 	int value = a[0];
@@ -103,61 +103,61 @@ void priorityQueue::down(int i) {
 }
 ```
    
-4. **Метод проверки пустой очереди (isEmpty):**
-Проверяет, пуста ли приоритетная очередь. Возвращает true, если вектор a пуст, и false в противном случае.
+4. **Method for checking if the queue is empty (isEmpty):**
+Checks if the priority queue is empty. Returns true if vector a is empty and false otherwise.
 
-```cpp
+``cpp
 bool priorityQueue::isEmpty() const {
 	return a.empty();
 }
 ```
 
-5. **Алгоритм работы очереди с приоритетом:**
+5. **Algorithm for priority queue operation:**
 
-    1. **Инициализация:**
-       - Создание экземпляра класса `priorityQueue`.
-       - Внутренний вектор `a` используется для хранения элементов в виде бинарной кучи.
+    1. **Initialisation:**
+       - Create an instance of the `priorityQueue` class.
+       - The inner vector `a` is used to store items as a binary heap.
     
-    2. **Вставка элемента:**
-       - Новый элемент добавляется в конец вектора.
-       - Вызывается метод `up` для восстановления условий бинарной кучи.
+    2. **Element Insertion:**
+       - A new element is added to the end of the vector.
+       - The `up` method is called to restore the conditions of the binary heap.
     
-    3. **Извлечение элемента:**
-       - Проверка наличия элементов в куче.
-       - Извлечение значения из корня (с наивысшим приоритетом).
-       - Замена корня последним элементом вектора.
-       - Вызов метода `down` для восстановления условий бинарной кучи.
+    3. **Element Retrieval:**
+       - Checks if there are elements in the heap.
+       - Extracting the value from the root (with the highest priority).
+       - Replacing the root with the last element of the vector.
+       - Calling the `down` method to restore the conditions of the binary heap.
     
-    4. **Подъем элемента вверх:**
-       - Пока текущий элемент больше родителя и не достигнут корень:
-         - Меняем местами текущий элемент и его родителя.
-         - Обновляем индекс текущего элемента.
+    4. **Lifting an element up:**.
+       - Until the current element is greater than the parent and the root is reached:
+         - Swap the current element and its parent.
+         - Update the index of the current element.
     
-    5. **Опускание элемента вниз:**
-       - Пока есть хотя бы один потомок текущего элемента:
-         - Выбираем максимального из потомков.
-         - Если текущий элемент меньше выбранного потомка, меняем их местами.
-         - Обновляем индекс текущего элемента.
+    5. **Lowering an element down:**
+       - As long as there is at least one descendant of the current element:
+         - We select the maximum of the descendants.
+         - If the current element is less than the selected descendant, swap them.
+         - Update the index of the current element.
     
-    6. **Проверка наличия элементов:**
-       - Проверка, пуста ли куча, основываясь на пустоте вектора `a`.
+    6. **Checking the presence of elements:**
+       - Check if the heap is empty based on the emptiness of the vector `a`.
 
-## <p align="center">Результаты тестирования:</p>
-Тестирование проводилось с помощью фреймворка Google test. Система тестов состоит из 5 тестов: 2 базовых теста на вставку и извлечение, тест на вставку и извлечение с одинаковыми элементами, тест на вставку и извлечение с отрицательными элементами, тест на извлечение из пустой очереди. Все тесты прошли успешно.
+## <p align=‘centre’>Test results:</p>
+The testing was done using the Google test framework. The test system consists of 5 tests: 2 basic tests for insertion and extraction, test for insertion and extraction with identical elements, test for insertion and extraction with negative elements, test for extraction from an empty queue. All tests passed successfully.
 
-<p align="center">
-  <img src="https://github.com/IRomanchuk06/PriorityQueue/blob/main/TestPriorityQueue.png?raw=true" alt="Тесты библиотеки">
+<p align=‘centre’>
+  <img src=‘https://github.com/IRomanchuk06/PriorityQueue/blob/main/TestPriorityQueue.png?raw=true’ alt=‘Library tests’>
 </p>
 
-**Система тестов:**
+**Test System:**
 
 ```cpp
-#include "pch.h"
+#include ‘pch.h’
 #include <gtest/gtest.h>
-#include "../priorituQueue/priorityQueue.h"
+#include ‘../priorituQueue/priorityQueue.h’
 using namespace std;
 
-//базовый тест на вставку и извлечение
+//basic insertion and extraction test
 TEST(PriorityQueueTest, InsertAndExtract1) {
     priorityQueue pq;
 
@@ -176,8 +176,8 @@ TEST(PriorityQueueTest, InsertAndExtract1) {
     EXPECT_TRUE(pq.isEmpty());
 }
 
-//базовый тест на вставку и извлечение
-TEST(PriorityQueueTest, InsertAndExtract2) {
+//basic insertion and extraction test
+TEST(PriorityQueueueTest, InsertAndExtract2) {
     priorityQueue pq;
 
     pq.insert(10);
@@ -194,9 +194,8 @@ TEST(PriorityQueueTest, InsertAndExtract2) {
 
     EXPECT_TRUE(pq.isEmpty());
 }
-
-//тест на вставку и извлечение с одинаковыми элементами
-TEST(PriorityQueueTest, InsertAndExtractWithDuplicates) {
+//test for insertion and extraction with identical elements
+TEST(PriorityQueueueTest, InsertAndExtractWithDuplicates) {
     priorityQueue pq;
     pq.insert(10);
     pq.insert(5);
@@ -210,15 +209,15 @@ TEST(PriorityQueueTest, InsertAndExtractWithDuplicates) {
     EXPECT_TRUE(pq.isEmpty());
 }
 
-//тест на извлечение из пустой очереди
-TEST(PriorityQueueTest, ExtractFromEmptyQueue) {
+//test for extracting from an empty queue
+TEST(PriorityQueueueTest, ExtractFromEmptyQueueue) {
     priorityQueue pq;
 
     EXPECT_THROW(pq.extract(), std::out_of_range);
 }
 
-//тест на вставку и извлечение с отрицательными элементами
-TEST(PriorityQueueTest, InsertWithNegativeNumbers) {
+//test for insertion and extraction with negative elements
+TEST(PriorityQueueueTest, InsertWithNegativeNumbers) {
     priorityQueue pq;
     
     pq.insert(10);
@@ -240,21 +239,22 @@ int main(int argc, char** argv) {
     return RUN_ALL_TESTS();
 }
 ```
-## <p align="center">Вывод:</p>
-**Научился:**
-В ходе выполнения лабораторной работы я углубил свои знания в принципы работы приоритетных очередей на основе max-heap. Разобравшись с методикой "подъема" и "опускания" элементов, я научился эффективно управлять структурой данных, где максимальный элемент располагается в корне. Также я освоил применение стандартных контейнеров C++, в частности, использование `std::vector` для представления бинарной кучи.
+## <p align=‘centre’>Conclusion:</p>
+**Learned:**
+In the course of the lab work I deepened my knowledge in the principles of max-heap priority queues. By understanding the technique of ‘lifting’ and ‘dropping’ elements, I learnt how to effectively manage a data structure where the max-heap element is located at the root. I also learnt the use of standard C++ containers, in particular the use of `std::vector` to represent a binary heap.
 
-**Сделал:**
-Моим результатом стала успешная реализация библиотеки для приоритетной очереди. Я грамотно реализовал операции вставки, извлечения и проверки на пустоту, обеспечив эффективность и корректность работы структуры данных. Написание тестов с использованием Google Test позволило мне убедиться в надежности и правильности моей реализации.
+**Done:**
+My result was a successful implementation of a library for the priority queue. I implemented the insert, extract, and empty check operations intelligently, ensuring that the data structure worked efficiently and correctly. Writing tests using Google Test allowed me to make sure that my implementation was reliable and correct.
 
-**Освоил:**
-Эта лабораторная работа подарила мне глубокое понимание проектирования и реализации приоритетных очередей. Опыт работы с тестовыми фреймворками, в данном случае с Google Test, дал возможность проверить функциональность моего кода, что стало важным шагом в обеспечении его корректности. Использование стандартных исключений для обработки ошибок стало неотъемлемой частью моего опыта в создании надежных программных решений.
+**Mastered:**
+This lab work gave me a deep understanding of priority queue design and implementation. Experience with testing frameworks, in this case Google Test, gave me the opportunity to test the functionality of my code, which was an important step in ensuring its correctness. Using standard exceptions for error handling became an integral part of my experience in creating reliable software solutions.
 
-В итоге, лабораторная работа не только расширила мои теоретические знания, но и придала практический опыт в области разработки структур данных, что положительно сказывается на моих навыках программирования.
+As a result, the lab work not only expanded my theoretical knowledge, but also gave me practical experience in the field of data structures development, which has a positive effect on my programming skills.
 
-## <p align="center">Используемые источники:</p>
-1. https://neerc.ifmo.ru/wiki/index.php?title=Приоритетные_очереди#.D0.A0.D0.B5.D0.B0.D0.BB.D0.B8.D0.B7.D0.B0.D1.86.D0.B8.D0.B8 (определения понятий).
-2. https://www.youtube.com/watch?v=5mD-rhaYF4U&t=209s (создание библиотеки).
-3. https://www.youtube.com/watch?v=o1ZDXf7NGN4&t=868s (реализация алгоритмов на C++).
-4. https://github.com/google/googletest (про Google test: установка, использование).
-5. https://chat.openai.com (помощь в освоении материала)
+## <p align=‘centre’>Sources used:</p>
+1. https://neerc.ifmo.ru/wiki/index.php?title=Приоритетные_очереди#.D0.A0.D0.B5.D0.B0.D0.BB.D0.B8.D0.B7.D0.B0.D1.86.D0.B8.D0.B8 (definitions of concepts).
+2. https://www.youtube.com/watch?v=5mD-rhaYF4U&t=209s (library creation).
+3. https://www.youtube.com/watch?v=o1ZDXf7NGN4&t=868s (implementing algorithms in C++).
+4. https://github.com/google/googletest (about Google test: installation, use).
+5. https://chat.openai.com (help in mastering the material)
+
