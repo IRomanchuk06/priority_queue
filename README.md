@@ -37,7 +37,7 @@ In programming, a library is a collection of programme code intended for solving
 
 5. **Methods to maintain the data structure:**
    - **Method `up(i)`:** Moves an element up the tree, ensuring that the data structure is correct after insertion.
-   - ** **Method `down(i)`:** Drops an element down the tree, ensuring that the data structure is correct after extraction.
+   - **Method `down(i)`:** Drops an element down the tree, ensuring that the data structure is correct after extraction.
 
 6. **Exception `std::out_of_range`:**
    An exception used in C++ to signal when an index is out of range. In this context, used to handle retrieval attempts from an empty priority queue.
@@ -50,7 +50,7 @@ In programming, a library is a collection of programme code intended for solving
 In my library I implemented a binary heap via `std::vector`. Where the n-th element corresponded to the elements 2n+1 and 2n+2.
 
 <p align=‘centre’>
-  <img src=‘https://media.geeksforgeeks.org/wp-content/cdn-uploads/binaryheap.png’ alt=‘Binary heap via vector’>
+  <img src='https://media.geeksforgeeks.org/wp-content/cdn-uploads/binaryheap.png' alt=‘Binary heap via vector’>
 </p>
 
 2. **Insert method (insert):**
